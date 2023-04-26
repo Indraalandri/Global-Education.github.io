@@ -1,0 +1,5062 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #FFF ;
+    --color2: #181818 ;
+    background-color: #70dafa;
+}
+
+.ge {   
+    font-size: 48px;
+    font-weight: bold;
+    color:var(--color2);
+}
+
+.p-ge {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.and {
+    color: var(--color1);
+}
+
+.cc {
+    color: red;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    background-color:#11bae4;
+    padding: 8px 128px;
+    margin: 0;
+    font-weight: bold;
+    z-index: 99;
+}
+
+.nav-bar h1 {
+    margin: 0;
+    animation: flash 3s infinite;
+    -webkit-animation: flash 3s infinite;
+}
+
+@keyframes flash {
+    from {
+        filter: opacity(0);
+        -webkit-filter: opacity(0);
+}
+    to {
+        filter:opacity(1);
+        -webkit-filter:opacity(1);
+}
+}
+
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color2);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFC108;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: #FFC108;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    margin-right: 10px;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+
+
+/* ----------------------------------------------------------end navbar------------------------------------------------------------ */
+
+/* ----------------------------------------------------------section 1 ------------------------------------------------------------ */
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 32px;
+    position: relative;
+    padding: 150px 128px 24px 128px;
+    background-color: #70dafa;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+.landing-view {
+    padding: 15px;
+}
+
+.landing-view h1 {
+    font-size: 48px;
+    line-height: 50px;
+}
+
+.jean {
+    text-align: justify;
+    color: #FFC108;
+    text-shadow:2px 1px 2px #000000;
+
+}
+
+.landing-view p {
+    font-size: 26px;
+    color: #181818;
+    text-align: justify;
+}
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+    margin-bottom: 75px;
+}
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- pop up------------------------------ */
+
+/* ------------------------------------------------------end section 1 ------------------------------------------------------------ */
+
+/* ------------------------------------------------------ section 2 ------------------------------------------------------------ */
+
+#landing2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 32px;
+    position: relative;
+    padding: 48px 128px 48px 128px;
+    background-color: #70dafa;
+}
+
+#landing2 > div {
+    width: 50%;
+}
+
+.landing-view2 {
+    padding: 15px;
+}
+
+.landing-view2 h1 {
+    font-size: 48px;
+    line-height: 50px;
+}
+
+.landing-view2 p {
+    font-size:26px;
+    color: #181818;
+    text-align:justify;
+}
+
+
+.fijiah {
+    color: #ffbf00;
+    text-shadow:2px 1px 2px #000000;
+
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0;
+    background-color:#70dafa;
+    z-index: 3 ;
+}
+
+#landing p {
+    margin-bottom: 16px;
+}
+
+/* ------------------------------------------------------end section 2 ------------------------------------------------------------ */
+
+/* ---------------------------------------------------------- HOME ---------------------------------------------------------------- */
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 32px;
+    position: relative;
+    padding: 180px 128px 112px 128px;
+    background-color: #70dafa;
+    height: 100%;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 32px;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    background: url(images/1.jpeg);
+    background-size: cover;
+    margin: 5px auto;
+    animation:slide 40s infinite;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+
+    0% {
+        background: url(images/1.jpeg);
+        background-size: cover;
+    }
+    10%{
+        background: url(images/2.jpeg);
+        background-size: cover;
+    }
+    20%{
+        background: url(images/3.jpeg);
+        background-size: cover;
+    }
+    30%{
+        background: url(images/4.jpeg);
+        background-size: cover;
+    }
+    40%{
+        background: url(images/5.jpeg);
+        background-size: cover;
+    }
+    50%{
+        background: url(images/5.jpeg);
+        background-size: cover;
+    }
+    60%{
+        background: url(images/6.jpeg);
+        background-size: cover;
+    }
+    70%{
+        background: url(images/7.jpeg);
+        background-size: cover;
+    }
+    80%{
+        background: url(images/8.jpeg);
+        background-size: cover;
+    }
+    90%{
+        background: url(images/9.jpeg);
+        background-size: cover;
+    }
+    100%{
+        background: url(images/10.jpeg);
+        background-size: cover;
+    }
+}
+
+.about-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-stats-item div {
+    width: 50px;
+    height: 10px;
+    background-color: #FFC108;
+    margin-bottom: 16px;
+}
+
+#about .efc {
+width: 100%;
+height: 50px;
+background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+text-align: center;
+justify-content: center;
+padding: 12px;
+position: relative;
+border-radius: 10px;
+margin-bottom: 10px;
+margin-top: -35px;
+}
+
+#about h1 {
+    font-size:32px;
+    font-weight: bold;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: -5.5px;
+}
+
+.about-mobile p {
+font-size:  26px;
+text-align: justify;
+padding: 0 10px;
+margin-bottom: 0;
+}
+
+.about-stats-item .h1-asi {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-stats-item div {
+
+}
+
+.about-stats-item p {
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------- END HOME ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------- SERVICE ---------------------------------------------------------------- */
+
+#service {
+    position: relative;
+    background-color: #70dafa;
+    align-items: center;
+    padding: 128px 128px 112px 128px;
+    column-gap: 32px;
+}
+
+#service h1 {
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 7px;
+    text-align: center;
+    background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+    border-radius: 5px;
+    color: black;
+}
+
+#service h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+}
+
+.service-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-header h1 {
+    position: relative;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 112px;
+    margin-top: 64px;
+    padding: 0 15px;
+}
+
+.service-detail-item {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+}
+
+.service-detail-item:hover {
+    transform: scale(1.1);
+}
+
+.service-detail-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#service2 {
+    position: relative;
+    background-color: #70dafa;
+    align-items: center;
+    padding: 16px 128px;
+    column-gap: 32px;
+}
+
+#service2 h1 {
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 7px;
+    text-align: center;
+    background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+    border-radius: 5px;
+    color: black;
+}
+
+#service2 {
+    position: relative;
+    background-color: #70dafa;
+    align-items: center;
+    padding: 80px 128px 10px 128px;
+    column-gap: 32px;
+}
+
+.service-detail2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 72px;
+    margin-top: 15px;
+}
+
+.basic-english p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+    border-radius: 10px;
+}
+
+.basic-english ol {
+    padding: 5px;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.basic-english li {
+    font-size: 20px;
+}
+
+.border-style {
+    border: 3px solid black;
+    border-style: dotted;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------- END SERVICE ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------- KARTU DISKON ---------------------------------------------------------------- */
+#kartudiskon {
+    position: relative;
+    background-color: #70dafa;
+    align-items: center;
+    padding: 16px 128px;
+}
+#kartu-diskon {
+    display: flex;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-style: dotted;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin:0;
+    margin-bottom: 5px;
+}
+
+.offer-box {
+    width: 100%;
+    padding: 5px;
+    background-color: #11bae4;
+    margin: 50px auto;
+    text-align: center;
+    margin: 0;
+}
+
+.offer-box p {
+font-size: 28px;
+margin: 0;
+}
+
+.offer-box span {
+    color: rgb(219, 159, 47);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.diskon-coret {
+    text-decoration: line-through rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+}
+
+.offer-box button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+} 
+
+.diskon {
+    width: 10%;
+    background:-webkit-linear-gradient(left top, #e9bc35, #28cdc2);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.rotasi {
+    rotate: 90deg;
+    font-size: 37px;
+    font-weight: bold;
+    white-space: nowrap;
+    justify-content: center;
+    letter-spacing: 5px;
+    margin-top: 45px;
+}
+
+#padding {
+    box-sizing: border-box;
+    padding: 5px;
+    border: 3px solid black;
+    border-style: dotted;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.benefit-card {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    background-color: #11bae4;
+    text-align: center;
+    justify-content: center;
+    margin:auto;
+    position: relative;
+    padding: 10px;
+}
+
+.benefit-card h3 {
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 5px;
+    margin-top: -20px;
+    background:-webkit-linear-gradient(left top, #e9bc35, #03d2c4, #e9bc35);
+    border-radius: 10px;
+}
+
+li {
+    text-align: justify;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+ol {
+    margin: auto;
+padding: 0 50px;
+}
+
+/* ---------------------------------------------------------- END KARTU DISKON ---------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------- CONTACT ---------------------------------------------------------------- */
+
+
+#contact {
+    position: relative;
+    background-color: #70dafa;
+    align-items: center;
+    padding:128px 128px 32px 128px;
+}
+
+#contact h1 {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    background:-webkit-linear-gradient(left top, #e9bc35, #03d2c4, #e9bc35);
+    border-radius: 10px;
+}
+
+.sosial-media {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.p-sosialmedia1 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+.p-sosialmedia2 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+    color: #000000;
+    border: 2.5px solid #FFC108;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #03d2c489;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+
+#contact .non-spacebet {
+    position: relative;
+}
+
+#contact > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("./images/accent2.svg");
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    column-gap: 32px;
+}
+
+.contact-detail > div, .contact-detail > form {
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #FFC108;
+    padding: 24px 24px;
+    width: 100%;
+    height: 100%;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+form button {
+    border: none;
+    background:-webkit-linear-gradient(left top, #e9bc35, #03d2c4, #e9bc35);
+    height: 25px;
+    font-weight: bold;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    margin-top: 15px;
+    grid-template-areas:    "name subject"
+                            "email phone"
+                            "message message";
+}
+
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-phone {
+    grid-area: phone;
+}
+
+#input-message {
+    grid-area: message;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    background: none;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #FFC108;
+}
+
+.alamat iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------------------------------------- END CONTACT ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------- FOOTER ---------------------------------------------------------------- */
+
+footer {
+    padding: 16px 128px;
+    background-color: #11bae4;
+    color: black;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 100%;
+    color: #000000;
+    font-weight: bold;
+}
+
+.ec {
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h5 {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* ---------------------------------------------------------- END FOOTER ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- screen untuk hp --------------------------------------------------------------------- */
+#check {display: none;}
+@media (min-width: 360px) and (max-width: 374px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.4);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+    #landing {
+        padding: 24px 16px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen HP----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 28px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 22px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 20px;
+        color: #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    padding: 24px 16px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 21.5px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+}
+
+.landing-view2 p {
+    font-size: 20px;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:24px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        padding: 5px;
+    }
+
+    #about p {
+        font-size: 20px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+
+    .slider {
+        margin-top: 75px;
+    }
+
+    .about-stats {
+        margin:0;
+    }
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:22px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding: 12px;
+    margin-top: 50px;
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.service-detail2 {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:12.5px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:15px 0px;
+    height: 50px;
+    font-size: 19px;
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 19px;
+}
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 45px;
+text-align: center;
+padding-top: 8px;
+}
+
+.hs {
+    background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon {
+    display: none;
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+/* .rotasi {
+    margin-top: 200px;
+    font-size: 38px;
+} */
+
+.benefit-card h3 {
+    font-size: 30px;
+}
+
+.benefit-card li {
+font-size: 21px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60px;
+    margin-bottom:10px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.alamat {
+    height: 80vh;
+
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+}
+
+/* -------------------------------------------------- display 360 px ------------------------------------------------------------------- */
+
+/* -------------------------------------------------- display 375 px ------------------------------------------------------------------- */
+
+#check {display: none;}
+@media (min-width: 375px) and (max-width: 389px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.4);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+    #landing {
+        padding: 24px 16px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen HP----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 28px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 22px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 22px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    padding: 24px 16px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 21.5px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+}
+
+.landing-view2 p {
+    font-size: 22px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:24px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        padding: 5px;
+    }
+
+    #about p {
+        font-size: 22px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider { margin-top:75px;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:22px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 50px;
+
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 10px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {
+    margin-top: 10px;
+}
+
+.service-detail2 {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:12.5px;
+    height: 50px;
+    font-size: 22px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:15px 0px;
+    height: 50px;
+    font-size: 20px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 19px;
+}
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 45px;
+text-align: center;
+padding-top: 8px;
+}
+
+.hs {
+    background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon {
+    display: none;
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+
+.benefit-card h3 {
+    font-size: 30px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.benefit-card li {
+font-size: 21px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.alamat {
+    height: 80vh;
+
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 20px;
+    font-weight: bold;
+}
+}
+
+
+/* -------------------------------------------------- display 375 px ------------------------------------------------------------------- */
+
+/* -------------------------------------------------- display 390 px ------------------------------------------------------------------- */
+
+
+#check {display: none;}
+@media (min-width: 389px) and (max-width: 413px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.4);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #FFC108;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #FFC108;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+    #landing {
+        padding: 24px 16px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen HP----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 28px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 24px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 22px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #ffffff;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    padding: 24px 16px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 24px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+}
+
+.landing-view2 p {
+    font-size: 22px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:24px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        padding: 5px;
+    }
+
+    #about p {
+        font-size: 22px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider {margin-top: 75px;}
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 50px;
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 40px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {margin-top: 10px;}
+
+.service-detail2 {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:12.5px;
+    height: 50px;
+    font-size: 24px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:15px 0px;
+    height: 50px;
+    font-size: 21px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 19px;
+}
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 48px;
+text-align: center;
+padding-top: 8px;
+}
+
+.hs {
+    background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon {
+    display: none;
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+/* .rotasi {
+    margin-top: 200px;
+    font-size: 38px;
+} */
+
+.benefit-card h3 {
+    font-size: 30px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.benefit-card li {
+font-size: 21px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.alamat {
+    height: 80vh;
+
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 21px;
+    font-weight: bold;
+}
+}
+
+/* -------------------------------------------------- display 390 px ------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------- display 414 px ------------------------------------------------------------------- */
+
+
+#check {display: none;}
+@media (min-width: 414px) and (max-width: 427px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+    #landing {
+        padding: 24px 16px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen HP----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 32px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 26px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .slider { margin-top: 75px;}
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 24px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    padding: 24px 16px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 26px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+}
+
+.landing-view2 p {
+    font-size: 24px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:26px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        padding: 5px;
+    }
+
+    #about p {
+        font-size: 24px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:26px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 75px;
+}
+
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 35px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {margin-top: 15px;}
+
+.service-detail2 {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:12.5px;
+    height: 50px;
+    font-size: 26px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:15px 0px;
+    height: 50px;
+    font-size: 24px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 22px;
+}
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 45px;
+text-align: center;
+padding-top: 8px;
+}
+
+.hs {
+background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+.rotasi {
+    margin-top: 210px;
+    font-size: 40px;
+    text-shadow:4px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+} 
+
+.benefit-card h3 {
+    font-size: 30px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.benefit-card li {
+font-size: 22px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.alamat {
+    height: 80vh;
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 22px;
+    font-weight: bold;
+}
+}
+
+
+/* -------------------------------------------------- display 414 px ------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------- display 428 px ------------------------------------------------------------------- */
+
+
+#check {display: none;}
+@media (min-width: 428px) and (max-width: 430px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+    #landing {
+        padding: 24px 16px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen HP----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 32px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 26px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 24px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    padding: 24px 16px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 26px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+}
+
+.landing-view2 p {
+    font-size: 24px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:26px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+    }
+
+    #about p {
+        font-size: 24px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider {
+        margin-top:75px;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:26px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 70px;
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:24px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 40px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.service-detail2 {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:12.5px;
+    height: 50px;
+    font-size: 26px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:15px 0px;
+    height: 50px;
+    font-size: 24px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 22px;
+}
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 45px;
+text-align: center;
+padding-top: 8px;
+}
+
+.hs {
+background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+.rotasi {
+    margin-top: 210px;
+    font-size: 40px;
+    text-shadow:4px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+} 
+
+.benefit-card h3 {
+    font-size: 30px;
+    text-shadow:2px 1px 2px #ffffff;
+
+}
+
+.benefit-card li {
+font-size: 22px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.alamat {
+    height: 80vh;
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 22px;
+    font-weight: bold;
+}
+}
+
+
+
+
+/* -------------------------------------------------- display 820 px ------------------------------------------------------------------- */
+
+#check {display: none;}
+@media (min-width: 769px) and (max-width: 820px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+
+    #landing {
+        align-items: center;
+        text-align: center;
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen tab----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 40px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: 25px;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 300px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+
+
+    #landing h1 {
+        font-size: 46px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+        letter-spacing: -1px;
+        margin-top:-50px;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 32px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 32px;
+    position: relative;
+    padding: 48px 32px;
+    background-color: #70dafa;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 44px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+    
+}
+
+.landing-view2 p {
+    font-size: 32px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+#landing2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 30px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:32px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        margin-top: -2.5px;
+    }
+
+    #about p {
+        font-size: 32px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider {
+        margin-top:75px;
+        height: 500px;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 80px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 90px;
+}
+
+#service h2 {
+    font-size: 32px;
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.service-detail {
+    gap: 50px;
+}
+
+.service-detail-item:hover {
+    transform: scale(1.05);
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 40px;
+    height: 80px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {
+    margin: 20px 0;
+}
+
+.service-detail2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:10px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:10px 0px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english ol {
+    padding-left: 30px;
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 32px;
+}
+
+
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 64px;
+text-align: center;
+padding-top: 30px;
+}
+
+.hs {
+background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+font-size: 32px;
+}
+
+.offer-box button {
+    margin-top:10px;
+    font-size: 28px;
+}
+
+.rotasi {
+    margin-top: 110px;
+    font-size: 40px;
+    text-shadow:4px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+} 
+
+.benefit-card h3 {
+    font-size: 48px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.benefit-card li {
+font-size: 32px;
+padding: 0;
+text-align: start;
+margin-top:10px;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 48px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+    margin-top: 100px;
+    height: 80px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 60px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 70px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    justify-content: center;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-group label {
+    font-size: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    height: 50px;
+    font-size: 32px;
+}
+
+.alamat {
+    height: 80vh;
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 32px;
+    font-weight: bold;
+}'''''''''''
+
+h5 {
+    font-size: 24px;
+}
+}
+
+
+/* -------------------------------------------------- display 1080 px ------------------------------------------------------------------- */
+
+
+
+
+#check {display: none;}
+@media (min-width: 821px) and (max-width: 1080px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+
+    #landing {
+        align-items: center;
+        text-align: center;
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen tab----------- */
+
+    .nav-bar {
+        padding: 8px 32px;
+    }
+
+    .ge {
+        font-size: 32px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+#landing {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12.5%;
+}
+
+    #landing h1 {
+        font-size: 40px;
+        padding: 10px 10px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+    }
+
+    .landing-view p {
+        padding: 0 10px;
+        font-size: 30px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 32px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 44px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+
+    
+}
+
+.landing-view2 p {
+    font-size: 32px;
+    margin-top:10px;
+}
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:50px;
+    }
+
+    #about h1 {
+        font-size:32px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        margin-top: -2.5px;
+    }
+
+    #about p {
+        font-size: 32px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider {
+        margin-top:75px;
+        height: 500px;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column-reverse;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 80px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 70px;
+}
+
+#service h2 {
+    font-size: 32px;
+}
+
+.service-detail {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.service-detail {
+    gap: 50px;
+}
+
+.service-detail-item:hover {
+    transform: scale(1.05);
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 40px;
+    height: 80px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {
+    margin: 20px 0;
+}
+
+.service-detail2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:10px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:10px 0px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english ol {
+    padding-left: 30px;
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 32px;
+}
+
+
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 64px;
+text-align: center;
+padding-top: 30px;
+}
+
+.hs {
+background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+.rotasi {
+    margin-top: 110px;
+    font-size: 40px;
+    text-shadow:4px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+} 
+
+.benefit-card h3 {
+    font-size: 48px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.benefit-card li {
+font-size: 32px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 48px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+    margin-top: 80px;
+    height: 80px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 60px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 70px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    justify-content: center;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-group label {
+    font-size: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    height: 50px;
+    font-size: 32px;
+}
+
+.alamat {
+    height: 80vh;
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 24px;
+}
+}
+
+
+
+/* -------------------------------------------------- display 820 px ------------------------------------------------------------------- */
+
+
+
+#check {display: none;}
+@media (min-width: 1080px) and (max-width: 1280px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background:rgba(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top:10px;}
+    .menu li a {
+        padding: 0;
+        font-size: 16px;
+    color: #e9bc35;}
+    .open-menu , .close-menu {
+        display: block;
+        color: #e9bc35;
+    }
+    #check:checked ~ .menu {right: 0;}
+    
+    body {
+        box-sizing: border-box;
+    }
+
+    #landing {
+        align-items: center;
+        text-align: center;
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    #landing > div {
+        width: 100%;
+    }
+
+/* ----------Navbar Screen tab----------- */
+
+    .nav-bar {
+        padding: 24px 64px;
+    }
+
+    .ge {
+        font-size: 48px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .p-ge {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    /* ---------- End Navbar Screen HP----------- */
+
+/* --------------- Landing 1 ----------- */
+
+/* ----------------------- pop up------------------------------ */
+
+.person-container {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.person {
+    --transform-speed: 450ms;
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person-circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 80%;
+    bottom: 0;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: 290px;
+    margin-inline: auto;
+    transform: scale(1.15);
+    transition: var(--transform-speed) ease-in-out;
+    margin-bottom: -5px;
+}
+
+.person-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container:hover {
+    scale: 1.1;
+}
+
+.person-container:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+/* ----------------------- person 2 ------------------------------ */
+
+.person-container2 {
+    aspect-ratio: 1/1.25;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: var(--transform-speed) ease-in-out;
+    margin-top: -100px;
+}
+
+.person-container2 img {
+    max-width: 100%;
+    display: block;
+}
+
+.person-container2:hover {
+    scale: 1.1;
+}
+
+.person-container2:hover .person-img {
+    transform:
+    scale(1.1) 
+    translateY(-1.1rem);
+}
+
+
+
+/* ----------------------- pop up------------------------------ */
+#landing {
+    display: flex;
+    flex-direction: row;
+    padding: 188px 64px 112px 64px;
+    column-gap: 128px;
+}
+
+    #landing h1 {
+        font-size: 45px;
+        padding: 10px 35px;
+        margin: 0;
+        text-align: justify;
+        line-height: normal;
+    }
+
+
+    .landing-view p {
+        padding: 0 35px;
+        font-size: 32px;
+        color: #000000;
+    }
+
+    .jean {
+        text-shadow:1px 1px 2px #000000;
+    }
+
+/* --------------- End Landing 1 ----------- */
+/* --------------- Landing 2 ----------- */
+
+#landing2 {
+    display: flex;
+    flex-direction: row;
+    padding: 120px 64px 112px 64px;
+    column-gap: 128px;
+}
+
+#landing2 > div {
+    width: 100%;
+}
+
+.landing-view2 h1 {
+    font-size: 44px;
+    text-align: justify;
+    line-height: normal;
+    margin-top: -50px;
+    padding: 10px 35px;
+}
+
+.landing-view2 p {
+    font-size: 32px;
+    padding: 0 35px;
+}
+
+.fijiah {
+    text-shadow:1px 1px 2px #000000;
+}
+
+
+
+/* --------------- End Landing 2 ----------- */
+
+/* ----------------- About ----------------- */
+
+    #about {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 64px;
+        padding-top: 10px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #about img {
+        width: 100%;
+        height: 350px; ;
+    }
+
+    #about .about-mobile {
+        margin-top:80px;
+    }
+
+    #about h1 {
+        font-size:32px;
+        font-weight: bold;
+        text-shadow:2px 1px 2px #ffffff;
+        margin-top: -5.5px;
+    }
+
+    #about .efc {
+        margin-top: -70px;
+    }
+
+    #about p {
+        font-size: 32px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .slider {
+        margin-top:160px;
+        height: 600px;
+        background-size: cover;
+    }
+
+    .about-stats {margin:0;}
+
+/* ----------------- End About ----------------- */
+
+/* ----------------- Service ----------------- */
+
+#service {
+    flex-direction: column;
+    padding:24px 32px;
+}
+
+#service > div {
+    width:100%;
+}
+
+#service h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 80px;
+    padding: 12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 150px;
+}
+
+#service h2 {
+    font-size: 32px;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 112px;
+    margin-top: 64px;
+    padding: 0 15px;
+}
+
+.service-detail {
+    gap: 25px;
+}
+
+.service-detail-item:hover {
+    transform: scale(1.05);
+}
+
+#service2 {
+    flex-direction: column-reverse;
+    padding: 24px 32px;
+}
+
+#service2 h1 {
+    font-size:48px;
+    letter-spacing: normal;
+    width: auto;
+    height: 50px;
+    padding:12px;
+    text-shadow:2px 1px 2px #ffffff;
+    margin-top: 100px;
+    height: 80px;
+}
+
+#service2 > div {
+    width:100%;
+}
+
+.border-style {
+    margin: 20px 0;
+}
+
+.service-detail2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-english p{
+    text-align: center;
+    padding:10px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english .class-be2{
+    text-align: center;
+    padding:10px 0px;
+    height: 50px;
+    font-size: 32px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.basic-english ol {
+    padding-left: 30px;
+}
+
+.basic-english li {
+    text-align: start;
+    font-size: 32px;
+}
+
+
+/* ----------------- End Service ----------------- */
+
+/* ----------------- Diskon ----------------- */
+
+#kartudiskon {
+    padding:16px 32px;
+}
+
+#kartudiskon h2 {
+text-shadow: 0 4px 2px black;
+font-size: 64px;
+text-align: center;
+padding-top: 30px;
+}
+
+.hs {
+background-color: #000000;
+border-radius: 15px;
+height: 130px;
+}
+
+.harga {
+    text-shadow: 0 4px 2px black;
+}
+
+.harga2 {
+    text-shadow: 0 4px 2px rgb(0, 0, 0);
+}
+
+.diskon-coret {
+    text-shadow: 0 4px 2px black;
+}
+.offer-box .class-p {
+margin-top:10px;
+}
+
+.offer-box button {
+    margin-top:10px;
+}
+
+.rotasi {
+    margin-top: 110px;
+    font-size: 40px;
+    text-shadow:4px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+} 
+
+.benefit-card h3 {
+    font-size: 48px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.benefit-card li {
+font-size: 32px;
+padding: 0;
+text-align: start;
+}
+
+/* ----------------- End Diskon ----------------- */
+
+/* ----------------- Contact ----------------- */
+
+#contact {
+    padding:16px 32px;
+}
+
+#contact h1 {
+    font-size: 48px;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: normal;
+    margin-top: 150px;
+    height: 80px;
+    text-shadow:2px 1px 2px #ffffff;
+}
+
+.sosial-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.sosial-media img {
+    width: 60px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.p-sosialmedia1 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    }
+
+.p-sosialmedia2 {
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 70px;
+    margin-bottom:12.5px;
+    }
+
+.sosial-media a {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    justify-content: center;
+} 
+
+.contact-detail > div, .contact-detail > form {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap:24px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-group label {
+    font-size: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    height: 50px;
+    font-size: 32px;
+}
+
+.alamat {
+    height: 80vh;
+}
+
+/* ----------------- End Contact ----------------- */
+
+#footer > div {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+#footer h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#footer p{
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.social-icon {
+    display: none;
+}
+
+#footer .ec {
+    font-size: 32px;
+    font-weight: bold;
+}'''''''''''
+
+h5 {
+    font-size: 24px;
+}
+
+}
+/* END */
+/* TINGGAL DEMPLOY */
